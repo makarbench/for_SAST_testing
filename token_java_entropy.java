@@ -4,6 +4,26 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+public class TokenGenerator1 {
+    public static String generateAccessToken1(int length) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder token = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            token.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return token.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Token 1: " + generateAccessToken1(32));
+    }
+}
+
+
+
 
 public class TokenGenerator2 {
     public static String generateAccessToken2(int length) {
