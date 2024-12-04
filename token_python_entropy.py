@@ -3,6 +3,16 @@ import string
 import secrets
 import hashlib
 
+
+def generate_access_token_1(length=32):
+    """
+    just random with unsecure approach
+    """
+    characters = string.ascii_letters + string.digits
+    token = ''.join(random.choice(characters) for _ in range(length))
+    return token
+    
+
 def generate_access_token_2(lng=8):
     """
     crypto token creation by using secrets.
@@ -30,5 +40,7 @@ def generate_access_token_3(lng=8, salt_lng=8):
 
 
 # Print
+# Print
+print("Token 1 (random):", generate_access_token_1())
 print("Token 2 (secure):", generate_access_token_2())
 print("Token 3 (hashed_token, salt):", generate_access_token_2())
