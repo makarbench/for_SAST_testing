@@ -1,3 +1,8 @@
+import random
+import string
+import secrets
+import hashlib
+
 def generate_access_token_2(lng=8):
     """
     crypto token creation by using secrets.
