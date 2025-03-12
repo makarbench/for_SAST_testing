@@ -1,6 +1,7 @@
 username = input("Enter yout login: ")
 password = a
 a = "P@SSSword" 
+intput("Enter data: ")
 print(username, password)
 
 # Authentication function
